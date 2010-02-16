@@ -24,7 +24,6 @@ module FreshnessFu
       visitor_model.class_eval do
         has_many :object_visits, :class_name => 'Visit', :foreign_key => :visitor_id, :as => :visitor
       end 
-
       tracked_relations = [opts[:what]].flatten
       tracked_relations.each do |relation| 
         #class name can be different that relation name has_many => :people , :class_name => 'Foo' 
